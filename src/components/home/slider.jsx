@@ -77,13 +77,12 @@ function CustomArrows() {
   }
   return (
     <div className="slider-container">
-      {console.log(api)}
       <Slider {...settings}>
         {api.map((api, index) => (
           <div className="px-2 " key={index}>
             <div className="nft_coll">
               <div className="nft_wrap">
-                <Link to="/item-details">
+                <Link to= {`/item-details/:${api.nftId}`}>
                   <img src={api.nftImage} className="lazy img-fluid" alt="" />
                 </Link>
               </div>
