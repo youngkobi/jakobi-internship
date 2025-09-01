@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import Slider from "react-slick";
-import MultipleItems from "./slider";
+import CustomArrows from "./slider";
 import { Carousel } from "react-bootstrap";
 
 const HotCollections = () => {
@@ -55,7 +55,7 @@ const HotCollections = () => {
                         </div>
             ))
            : (
-            <MultipleItems />
+            <CustomArrows />
           )}
         </div>
       </div>
