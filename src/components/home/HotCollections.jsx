@@ -4,6 +4,7 @@ import axios from "axios";
 import Slider from "react-slick";
 import CustomArrows from "./slider";
 import { Carousel } from "react-bootstrap";
+import Loadingstate from "../Loadingstate";
 
 const HotCollections = () => {
   const [api, setApi] = useState([]);
@@ -35,25 +36,8 @@ const HotCollections = () => {
           </div>
 
           {loading ? 
-            new Array(4).fill(0).map((element, index) => (
-              <div className="wrapper" key={index}>
-                          <div className="nft_coll  ">
-                            <div className="nft_wrap skelton-box">   
-                            </div>
-                            <div className="pp-skelly">
-                            <div className=" skelton-pp">
-                              _
-                            </div>
-                              <i className="fa fa-check-hotloading"></i>
-                              </div>
-                            <div className="nft_coll_info ">
-                            
-                              <div className="skelton-title"></div>
-                              <span className="skelton-code"></span>
-                            </div>
-                          </div>
-                        </div>
-            ))
+            <Loadingstate array={4}/>
+            
            : (
             <CustomArrows />
           )}
