@@ -68,7 +68,16 @@
     position: relative;
 }
 
-.fa-check{
+.fa-check-hotloading{
+    position: absolute;
+    right: 45%;
+    bottom: 5%;
+    color: white;
+    background-color: blue;
+    border-radius: 50%;
+}
+
+.fa-check-toploading{
     position: absolute;
     right: 45%;
     bottom: 5%;
@@ -82,4 +91,40 @@
    to {
       background-position-x: 0%
    }
+}
+
+.skelton-top_title{
+    background: linear-gradient(-45deg, #eee 40%, #fafafa 50%, #eee 60%);
+   background-size: 300%;
+   background-position-x: 100%;
+   animation: shimmer 1s infinite linear;
+    height: 20px;
+    width: 60%;
+}
+
+.skelton-top_price{
+       background: linear-gradient(-45deg, #eee 40%, #fafafa 50%, #eee 60%);
+   background-size: 300%;
+   background-position-x: 100%;
+   animation: shimmer 1s infinite linear;
+    height: 20px;
+    width: 40%;
+    margin-top: 10px;
+}
+
+
+.fa-check_top-loading{
+    margin-right: 0;
+}
+
+.skelton-pp-top{
+       background: black;
+   background-size: 300%;
+   background-position-x: 100%;
+   animation: shimmer 1s infinite linear;
+    width: 10%;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-radius: 50%;
+    z-index: 100;
 }

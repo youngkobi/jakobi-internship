@@ -86,7 +86,7 @@ function NewItemsSlider() {
             <div className="nft__item">
               <div className="author_list_pp">
                 <Link
-                  to="/author"
+                  to={`/author/:${api.authorId}`}
                   data-bs-toggle="tooltip"
                   data-bs-placement="top"
                   title="Creator: Monica Lucas"
@@ -112,7 +112,7 @@ function NewItemsSlider() {
                         <i className="fa fa-facebook fa-lg"></i>
                       </a>
                       <a href="" target="_blank" rel="noreferrer">
-                        <i classNkme="fa fa-twitter fa-lg"></i>
+                        <i className="fa fa-twitter fa-lg"></i>
                       </a>
                       <a href="">
                         <i className="fa fa-envelope fa-lg"></i>

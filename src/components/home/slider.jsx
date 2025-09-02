@@ -87,13 +87,13 @@ function CustomArrows() {
                 </Link>
               </div>
               <div className="nft_coll_pp">
-                <Link to="/author">
+                <Link to={`/author/:${api.authorId}`}>
                   <img className="lazy pp-coll" src={api.authorImage} alt="" />
                 </Link>
                 <i className="fa fa-check"></i>
               </div>
               <div className="nft_coll_info">
-                <Link to="/explore">
+                <Link to={`/item-details/:${api.nftId}`}>
                   <h4>{api.title}</h4>
                 </Link>
                 <span>ERC-{api.code}</span>

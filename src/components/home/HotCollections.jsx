@@ -44,7 +44,7 @@ const HotCollections = () => {
                             <div className=" skelton-pp">
                               _
                             </div>
-                              <i className="fa fa-check"></i>
+                              <i className="fa fa-check-hotloading"></i>
                               </div>
                             <div className="nft_coll_info ">
                             
