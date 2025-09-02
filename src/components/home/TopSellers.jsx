@@ -20,7 +20,6 @@ const TopSellers = () => {
     );
     setApi(data);
     setLoading(false)
-    console.log(data);
   }
   return (
 

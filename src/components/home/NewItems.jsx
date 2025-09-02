@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import NewItemsSlider from "./newItemsSlider";
+import Loadingstate from "../Loadingstate";
 
 const NewItems = () => {
 
@@ -8,7 +9,6 @@ const [loading, setLoading] = useState(true)
 
 
 useEffect(() => {
-   setLoading(true)
    setLoading(false)
    
   }, []);
@@ -23,25 +23,8 @@ useEffect(() => {
             </div>
           </div>
             {loading ? 
-            new Array(4).fill(0).map((element, index) => (
-              <div className="wrapper" key={index}>
-                          <div className="nft_coll  ">
-                            <div className="nft_wrap skelton-box">   
-                            </div>
-                            <div className="pp-skelly">
-                            <div className=" skelton-pp">
-                              _
-                            </div>
-                              <i className="fa fa-check"></i>
-                              </div>
-                            <div className="nft_coll_info ">
-                            
-                              <div className="skelton-title"></div>
-                              <span className="skelton-code"></span>
-                            </div>
-                          </div>
-                        </div>
-            ))
+           <Loadingstate array={4}/>
+            
            : (
             <NewItemsSlider />
           )}
