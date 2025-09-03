@@ -77,7 +77,7 @@ api.map((api, index) => (
           <div className="nft__item">
             <div className="author_list_pp">
               <Link
-                to={`/author/:${api.authorId}`}
+                to={`/author/${api.authorId}`}
                 data-bs-toggle="tooltip"
                 data-bs-placement="top"
               >

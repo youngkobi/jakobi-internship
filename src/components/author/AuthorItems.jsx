@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import AuthorImage from "../../images/author_thumbnail.jpg";
 import nftImage from "../../images/nftImage.jpg";
 import axios from "axios";
+import Loadingstate from "../Loadingstate";
 
 const AuthorItems = () => {
 
@@ -35,7 +36,10 @@ const AuthorItems = () => {
     <div className="de_tab_content">
       <div className="tab-1">
         <div className="row">
-         {api.map((api, index) => (
+        {loading ? 
+        <Loadingstate array={8}/>
+        :
+        api.map((api, index) => (
             <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12" key={index}>
               <div className="nft__item">
                 <div className="author_list_pp">
@@ -62,7 +66,7 @@ const AuthorItems = () => {
                       </div>
                     </div>
                   </div>
-                  <Link to="/item-details">
+                 <Link to={`/item-details/${api.nftId}`}>
                     <img
                       src={api.nftImage}
                       className="lazy nft__item_preview"
@@ -71,7 +75,7 @@ const AuthorItems = () => {
                   </Link>
                 </div>
                 <div className="nft__item_info">
-                  <Link to="/item-details">
+                   <Link to={`/item-details/${api.nftId}`}>
                     <h4>{api.title}</h4>
                   </Link>
                   <div className="nft__item_price">{api.price} ETH</div>

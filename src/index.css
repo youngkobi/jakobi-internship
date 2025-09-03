@@ -128,3 +128,51 @@
     border-radius: 50%;
     z-index: 100;
 }
+
+
+.items_skely{
+    background: linear-gradient(-45deg, #eee 40%, #fafafa 50%, #eee 60%);
+   background-size: 300%;
+   background-position-x: 100%;
+   animation: shimmer 1s infinite linear;
+
+}
+
+.items_skely-title{
+    height: 20px;
+    width: 40%;
+    background: linear-gradient(-45deg, #eee 40%, #fafafa 50%, #eee 60%);
+   background-size: 300%;
+   background-position-x: 100%;
+   animation: shimmer 1s infinite linear;
+   margin-bottom: 10px;
+}
+
+.items_skely-desc{
+    height:30vh;
+    width: 70%;
+    background: linear-gradient(-45deg, #eee 40%, #fafafa 50%, #eee 60%);
+   background-size: 300%;
+   background-position-x: 100%;
+   animation: shimmer 1s infinite linear;
+}
+
+.items_author-titles{
+      background: linear-gradient(-45deg, #eee 40%, #fafafa 50%, #eee 60%);
+   background-size: 300%;
+   background-position-x: 100%;
+   animation: shimmer 1s infinite linear;
+   height: 10px;
+   width: 15vw;
+}
+
+.item-skelly-icon{
+      background: linear-gradient(-45deg, #eee 40%, #fafafa 50%, #eee 60%);
+   background-size: 300%;
+   background-position-x: 100%;
+   animation: shimmer 1s infinite linear;
+   height: 60px;
+   width: 60px;
+   border-radius: 100%;
+   gap: 10px;
+}

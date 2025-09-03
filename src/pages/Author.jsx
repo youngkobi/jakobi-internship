@@ -10,6 +10,13 @@ const Author = () => {
    const [loading, setLoading] = useState()
   const [api, setApi] = useState([]);
   const {id} = useParams(api.authorId)
+  const [follow, setFollow] = useState(false)
+
+
+function handleFollow(){
+setFollow(true)
+
+}
 
 
  useEffect(() => {
@@ -23,6 +30,8 @@ const Author = () => {
       `https://us-central1-nft-cloud-functions.cloudfunctions.net/authors?author=${id}`
     );
     setApi(data);
+    console.log(data);
+    
     setLoading(false)
   }
   return (
@@ -64,10 +73,17 @@ const Author = () => {
                   </div>
                   <div className="profile_follow de-flex">
                     <div className="de-flex-col">
-                      <div className="profile_follower">{api.followers} followers</div>
-                      <Link to="#" className="btn-main">
+                      {follow? <div className="profile_follower">{api.followers +1} followers</div>
+                      :
+                      <div className="profile_follower">{api.followers} followers</div>}
+                     { follow ?
+                      <button className="btn-main">
+                        Unfollow
+                      </button>
+                     :
+                     <button onClick={()=> handleFollow()} className="btn-main">
                         Follow
-                      </Link>
+                      </button>}
                     </div>
                   </div>
                 </div>
