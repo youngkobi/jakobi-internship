@@ -108,12 +108,14 @@ api.map((api, index) => (
                   </div>
                 </div>
               </div>
-              <Link to="/item-details">
+              <Link to={`/item-details/${api.nftId}`}>
                 <img src={api.nftImage} className="lazy nft__item_preview" alt="" />
               </Link>
             </div>
             <div className="nft__item_info">
-              <Link to="/item-details">
+
+                   <Link to={`/item-details/${api.nftId}`}>
+
                 <h4>{api.title}</h4>
               </Link>
               <div className="nft__item_price">{api.price} ETH</div>
