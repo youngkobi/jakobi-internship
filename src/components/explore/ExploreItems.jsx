@@ -55,7 +55,7 @@ const { data } = await axios.get(
   return (
     <>
       <div>
-        <select id="filter" defaultValue=""
+        <select id="filter-items" defaultValue=""
         onChange={(event) => filterPost(event.target.value)}>
           <option value="">Default</option>
           <option value="price_low_to_high">Price, Low to High</option>
@@ -113,7 +113,9 @@ api.map((api, index) => (
               </Link>
             </div>
             <div className="nft__item_info">
+
                    <Link to={`/item-details/${api.nftId}`}>
+
                 <h4>{api.title}</h4>
               </Link>
               <div className="nft__item_price">{api.price} ETH</div>

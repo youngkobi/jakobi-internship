@@ -72,6 +72,7 @@ function NewItemsSlider() {
   const [api, setApi] = useState([]);
   const [loading, setLoading] = useState(false);
   async function fetchApi() {
+    
     const { data } = await axios.get(
       "https://us-central1-nft-cloud-functions.cloudfunctions.net/newItems"
     );
