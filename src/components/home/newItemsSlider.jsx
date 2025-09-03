@@ -79,14 +79,13 @@ function NewItemsSlider() {
   }
   return (
     <div className="slider-container">
-      {console.log(api)}
       <Slider {...settings}>
         {api.map((api, index) => (
           <div className="px-2" key={index}>
             <div className="nft__item">
               <div className="author_list_pp">
                 <Link
-                  to={`/author/:${api.authorId}`}
+                  to={`/author/${api.authorId}`}
                   data-bs-toggle="tooltip"
                   data-bs-placement="top"
                   title="Creator: Monica Lucas"

@@ -82,18 +82,18 @@ function CustomArrows() {
           <div className="px-2 " key={index}>
             <div className="nft_coll">
               <div className="nft_wrap">
-                <Link to= {`/item-details/:${api.nftId}`}>
+                <Link to= {`/item-details/${api.nftId}`}>
                   <img src={api.nftImage} className="lazy img-fluid" alt="" />
                 </Link>
               </div>
               <div className="nft_coll_pp">
-                <Link to={`/author/:${api.authorId}`}>
+                <Link to={`/author/${api.authorId}`}>
                   <img className="lazy pp-coll" src={api.authorImage} alt="" />
                 </Link>
                 <i className="fa fa-check"></i>
               </div>
               <div className="nft_coll_info">
-                <Link to={`/item-details/:${api.nftId}`}>
+                <Link to={`/item-details/${api.nftId}`}>
                   <h4>{api.title}</h4>
                 </Link>
                 <span>ERC-{api.code}</span>
