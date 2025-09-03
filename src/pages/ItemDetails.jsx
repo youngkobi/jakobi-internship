@@ -20,7 +20,7 @@ const ItemDetails = () => {
       `https://us-central1-nft-cloud-functions.cloudfunctions.net/itemDetails?nftId=${id}`
     );
     setApi(data);
-    console.log(data);
+
     setLoading(false)
   }
 

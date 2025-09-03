@@ -30,7 +30,6 @@ setFollow(true)
       `https://us-central1-nft-cloud-functions.cloudfunctions.net/authors?author=${id}`
     );
     setApi(data);
-    console.log(data);
     
     setLoading(false)
   }
