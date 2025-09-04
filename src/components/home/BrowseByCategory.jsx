@@ -49,7 +49,7 @@ const BrowseByCategory = () => {
               <i className="fa fa-th"></i>
               <span>Collectibles</span>
 
-              {/* any comment */}
+             {/* crazy first comment */}
             </Link>
           </div>
         </div>
