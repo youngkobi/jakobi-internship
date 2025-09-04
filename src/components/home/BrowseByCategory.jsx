@@ -48,7 +48,7 @@ const BrowseByCategory = () => {
             <Link to="/explore" className="icon-box style-2 rounded">
               <i className="fa fa-th"></i>
               <span>Collectibles</span>
-{/* dont change */}
+
               
             </Link>
           </div>
