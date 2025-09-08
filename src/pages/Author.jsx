@@ -14,7 +14,9 @@ const Author = () => {
 
 
 function handleFollow(){
-setFollow(true)
+setFollow(prev=> (
+  !prev
+))
 
 }
 
@@ -76,7 +78,7 @@ setFollow(true)
                       :
                       <div className="profile_follower">{api.followers} followers</div>}
                      { follow ?
-                      <button className="btn-main">
+                      <button className="btn-main" onClick={()=> handleFollow()}>
                         Unfollow
                       </button>
                      :

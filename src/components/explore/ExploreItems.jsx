@@ -9,6 +9,7 @@ import Loadingstate from "../Loadingstate";
 const ExploreItems = () => {
 const [loadmore, setLoadmore] = useState(8)
 const [loading, setLoading] = useState(true)
+const [allLoaded, setAllLoaded] = useState(false)
 
   useEffect(() => {
         fetchApi();
@@ -27,7 +28,10 @@ const [loading, setLoading] = useState(true)
 
   function clickLoadmore() {
     setLoadmore(4 + loadmore)
-    
+    if(loadmore === 12 ){
+       
+        setAllLoaded(true)
+    }
   }
 
   async function filterPost(filter) {
@@ -139,12 +143,15 @@ api.map((api, index) => (
 
 
 
-      <div className="col-md-12 text-center">
+    { allLoaded ?
+    null
+    :
+     <div className="col-md-12 text-center">
         <div to="" id="loadmore" className="btn-main lead"
         onClick={()=>clickLoadmore()}>
           Load more
         </div>
-      </div>
+      </div>}
     </>
   );
 };
